@@ -271,14 +271,14 @@ class SceneManager:
 
   #---------------------------------------------------------------------------
 
-  def save(self, output_folder, binary=True):
+  def save(self, output_folder, binary=False):
     self.save_cameras(output_folder, binary=binary)
     self.save_images(output_folder, binary=binary)
     self.save_points3D(output_folder, binary=binary)
 
   #---------------------------------------------------------------------------
 
-  def save_cameras(self, output_folder, output_file=None, binary=True):
+  def save_cameras(self, output_folder, output_file=None, binary=False):
     if not os.path.exists(output_folder):
       os.makedirs(output_folder)
 
@@ -315,7 +315,7 @@ class SceneManager:
 
   #---------------------------------------------------------------------------
 
-  def save_images(self, output_folder, output_file=None, binary=True):
+  def save_images(self, output_folder, output_file=None, binary=False):
     if not os.path.exists(output_folder):
       os.makedirs(output_folder)
 
@@ -368,7 +368,7 @@ class SceneManager:
 
   #---------------------------------------------------------------------------
 
-  def save_points3D(self, output_folder, output_file=None, binary=True):
+  def save_points3D(self, output_folder, output_file=None, binary=False):
     if not os.path.exists(output_folder):
       os.makedirs(output_folder)
 
